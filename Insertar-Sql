@@ -1,0 +1,27 @@
+	public void btnInsertar () {
+	
+		Connection laConexionInsertar = null;
+		
+		try {
+			laConexionInsertar = getConnection();
+			ps = laConexionInsertar.prepareStatement("insert into persona (clave,dia,nombre,genero) values (?,?,?)");
+			ps.setString(1, cajaClave.getText());
+			ps.setString(2, Date.valueOf(cajaFecha.getText()));
+			ps.setString(3, Date.valueOf(cajaFecha.getText()));
+			ps.setString(4, Date.valueOf(comboGenero.getSelectedItem().toString()));
+			
+			///Aqui solo indicamos. No ejecutamos nada
+			
+			int resultado = ps.executeUpdate(); ///Ejecutamos la insercion 
+			
+			if (resultado>0) {
+			///Exito
+		}
+			else {
+				///No exito
+			}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
