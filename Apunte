@@ -1,0 +1,21 @@
+•	Conectar
+•	Preparar
+•	Ejecutar
+
+•	Conectar
+o	Necesitamos un objeto de tipo connection
+o	laConexionInsertar = getConnection();
+
+•	Preparar
+o	Necesitas un prepared statement y un resul set globales
+o	Necesitamos un try catch
+o	En el prepared statement preparamos la consulta
+o	ps = laConexionInsertar.prepareStatement("insert into persona (clave,dia,nombre,genero) values (?,?,?)");
+o	El programa no sabe que datos va a insertar
+o	Se los vamos a establecer con el método set
+o	ps.setString(1, cajaClave.getText());
+o	
+
+•	Ejecutar
+o	int resultado = ps.executeUpdate(); ///Ejecutamos la inserción
+o	if (resultado>0) //exito else //algo fallo
