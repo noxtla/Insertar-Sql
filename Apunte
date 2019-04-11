@@ -17,5 +17,6 @@ o	ps.setString(1, cajaClave.getText());
 o	
 
 •	Ejecutar
+o Esta operacion nos devuelve un entero
 o	int resultado = ps.executeUpdate(); ///Ejecutamos la inserción
 o	if (resultado>0) //exito else //algo fallo
